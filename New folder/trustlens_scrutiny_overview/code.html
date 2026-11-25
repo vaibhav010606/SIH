@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><title>TrustLens — AICTE Statutory Scrutiny Engine</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#cdbdff", "outline-variant": "#bec8cb", "inverse-on-surface": "#eef1f4", "on-secondary": "#ffffff", "surface": "#f7fafd", "on-background": "#181c1e", "outline": "#6e797b", "primary": "#00616d", "on-primary-fixed": "#001f24", "on-primary-fixed-variant": "#004e59", "surface-container": "#ebeef1", "surface-tint": "#006876", "error": "#ba1a1a", "on-tertiary-container": "#f9f2ff", "surface-variant": "#e0e3e6", "secondary": "#4d5f7d", "primary-fixed": "#9eefff", "surface-bright": "#f7fafd", "on-error-container": "#93000a", "surface-container-high": "#e5e8eb", "tertiary": "#5f3dc1", "primary-fixed-dim": "#7dd3e4", "inverse-primary": "#7dd3e4", "on-secondary-container": "#4e607e", "on-secondary-fixed-variant": "#364764", "surface-dim": "#d7dadd", "on-surface-variant": "#3e494b", "surface-container-lowest": "#ffffff", "primary-container": "#0f7b8a", "surface-container-low": "#f1f4f7", "secondary-fixed": "#d6e3ff", "on-primary": "#ffffff", "secondary-fixed-dim": "#b5c7ea", "background": "#f7fafd", "on-tertiary-fixed-variant": "#4e28b0", "tertiary-fixed": "#e8deff", "inverse-surface": "#2d3133", "surface-container-highest": "#e0e3e6", "on-error": "#ffffff", "on-surface": "#181c1e", "on-secondary-fixed": "#071c36", "tertiary-container": "#7858dc", "error-container": "#ffdad6", "on-tertiary": "#ffffff", "on-tertiary-fixed": "#20005f", "secondary-container": "#c8dbfe", "on-primary-container": "#dff9ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1rem", "space-xs": "0.25rem", "space-md": "1rem", "margin": "2rem", "gutter": "1.5rem", "space-xl": "2rem", "space-lg": "1.5rem", "gutter-mobile": "0.75rem", "space-sm": "0.5rem" }, "fontFamily": { "headline-xl-mobile": ["Inter"], "body-sm": ["Inter"], "headline-lg": ["Inter"], "headline-sm": ["Inter"], "headline-xl": ["Inter"], "label-sm": ["JetBrains Mono"], "label-md": ["JetBrains Mono"], "body-lg": ["Inter"], "body-md": ["Inter"] }, "fontSize": { "headline-xl-mobile": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-sm": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-sm": ["1.125rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.025em", "fontWeight": "600" }], "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-md": ["0.8125rem", { "lineHeight": "1rem", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-lg": ["1rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.011em", "fontWeight": "400" }], "body-md": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "-0.006em", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen selection:bg-primary-container selection:text-on-primary"><aside class="fixed left-0 top-0 h-screen w-[248px] bg-[#0B1F3A] border-r border-[#1E293B] z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="h-16 px-4 flex items-center gap-3 border-b border-[#1E293B]"><img alt="TrustLens Brand Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4xcpGZyN0MzW260jf_cAVjrKTp2zQy1Ai8Pc5E7BB9VzqiPzHssdO9q8vxR3H8ip6V0QZJLLqTIWxZTzbev63W0SixSdHaictyK7We7bCt3gYGQfKgSXMfoMaYwPZEnAJGh_I4IDeI2F6w98E-_BEBa5Pm6BmuxoSI_bwIGQxmD4aaC88R5k-COH7vbcvfqW8ggCUqXJKvsp8yMDcgBI-dOcRbM0gcGheVrH4FVaf4n2EYVluseIi"/><div class="flex flex-col min-w-0 leading-tight"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-white truncate">TrustLens</span><span class="font-label-sm text-[10px] tracking-wider uppercase text-slate-400 truncate">AICTE Scrutiny Portal</span></div></div><div class="px-3 pt-3 pb-1"><span class="font-label-sm text-[10px] uppercase font-semibold text-slate-400 tracking-wider px-2">Statutory Operations</span></div><nav class="flex flex-col gap-0.5 px-2.5 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><a aria-current="page" class="group flex items-center gap-2.5 px-3 py-2 rounded-lg transition-colors bg-primary-container text-on-primary font-semibold shadow-sm" data-path="overview" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-primary-fixed">dashboard</span><span class="truncate">Overview</span></a><a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 font-body-md text-body-md hover:bg-slate-800/80 hover:text-white transition-colors" data-path="applications-queue" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-primary-fixed">move_to_inbox</span><span class="truncate">Applications Queue</span></a><a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 font-body-md text-body-md hover:bg-slate-800/80 hover:text-white transition-colors" data-path="case-detail-evidence" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-primary-fixed">find_in_page</span><span class="truncate">Case Detail &amp; Evidence</span></a><a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 font-body-md text-body-md hover:bg-slate-800/80 hover:text-white transition-colors" data-path="evidence-graph" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-primary-fixed">hub</span><span class="truncate">Evidence Graph</span></a><a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 font-body-md text-body-md hover:bg-slate-800/80 hover:text-white transition-colors" data-path="verification-center" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-primary-fixed">verified_user</span><span class="truncate">Verification Center</span></a><a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 font-body-md text-body-md hover:bg-slate-800/80 hover:text-white transition-colors" data-path="compliance-assistant" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-primary-fixed">rule_settings</span><span class="truncate">Compliance Assistant</span></a><a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 font-body-md text-body-md hover:bg-slate-800/80 hover:text-white transition-colors" data-path="audit-trail" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-primary-fixed">history_toggle_off</span><span class="truncate">Audit Trail</span></a><div class="my-2 border-t border-[#1E293B]/80 mx-1"></div><a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 font-body-md text-body-md hover:bg-slate-800/80 hover:text-white transition-colors" data-path="rules-clauses" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-primary-fixed">menu_book</span><span class="truncate">Rules &amp; Clauses</span></a><a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 font-body-md text-body-md hover:bg-slate-800/80 hover:text-white transition-colors" data-path="role-access" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-primary-fixed">admin_panel_settings</span><span class="truncate">Role &amp; Access</span></a></nav></div><div class="p-3 border-t border-[#1E293B] bg-[#08172c]/90 flex flex-col gap-2.5"><div class="flex items-center justify-between text-slate-400 font-label-sm text-label-sm"><div class="flex items-center gap-1.5"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span></span><span class="text-slate-300">Synced 2m ago</span></div><span class="material-symbols-outlined text-slate-400 text-sm hover:text-white cursor-pointer">sync</span></div><div class="flex items-center gap-2 px-2.5 py-1.5 rounded bg-slate-900/80 border border-slate-700/60"><span class="material-symbols-outlined text-emerald-400 text-base">security</span><div class="flex flex-col min-w-0"><span class="font-label-sm text-[10px] text-slate-200 tracking-wide uppercase font-semibold leading-none">Gov Sec L3 Signed</span><span class="font-label-sm text-[9px] text-slate-400 truncate mt-0.5">NIC Cert #9042-AICTE</span></div></div></div></aside><div class="pl-[248px]"><header class="fixed top-0 left-[248px] right-0 h-16 bg-surface/90 backdrop-blur-xl border-b border-[#E2E8F0] z-40 flex items-center justify-between px-6"><div class="flex items-center gap-3.5 flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full h-9 pl-9 pr-14 bg-surface-container-low border border-outline-variant/60 rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:bg-surface-container-lowest transition-all" placeholder="Search institutions, application IDs, faculty pins, or document hashes..." type="text"/><kbd class="absolute right-2.5 top-1/2 -translate-y-1/2 px-1.5 py-0.5 font-label-sm text-[10px] text-outline bg-surface-container rounded border border-outline-variant/80 select-none">⌘K</kbd></div><div class="hidden xl:flex items-center gap-1.5 h-9 px-3 rounded-full bg-surface-container-low border border-outline-variant/50 text-on-surface-variant font-label-md text-label-md select-none flex-shrink-0"><span class="material-symbols-outlined text-primary text-[17px]">calendar_today</span><span>AY 2026-27: Q1 Cycle</span><span class="material-symbols-outlined text-[15px] text-outline">expand_more</span></div></div><div class="flex items-center gap-4"><div class="hidden 2xl:flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/10 border border-primary/20"><span class="material-symbols-outlined text-primary text-[15px]">memory</span><span class="font-label-sm text-label-sm font-medium text-primary tracking-tight">AI Advisory Engine Active • Human In Loop</span></div><button aria-label="Notifications" class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 min-w-[16px] px-1 items-center justify-center rounded-full bg-error text-on-error font-label-sm text-[9px] font-semibold">3</span></button><div class="flex items-center gap-1 p-1 bg-surface-container-high rounded-lg"><button aria-label="Light theme" class="p-1 rounded bg-surface-container-lowest text-on-surface shadow-xs" type="button"><span class="material-symbols-outlined text-[17px]">light_mode</span></button><button aria-label="Dark theme" class="p-1 rounded text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[17px]">dark_mode</span></button></div><div class="h-5 w-[1px] bg-outline-variant/60"></div><div class="flex items-center gap-3"><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high font-label-sm text-label-sm font-semibold text-primary border border-outline-variant/40"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Scrutiny Officer</span><div class="flex items-center gap-2 cursor-pointer group"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEBMp1aIiDbbeBlPdD90e4xrR0bGVGEXoyRueJMzZPVmiyK89h0yde0i_-x6guROCa0Ptt6f-laDySx4nHQ5eSMNcv3t_W_kw8RGXWwiXwHpl91U2nyTstQEJ0VImzGBZ_pPrBlOMWngmj_KQyT3LjDz5wVypYYZ9gWXttCg_habq3I4uHEKMj0_EBrAe90I4AUkzakgoLbinJZ9jftarPYCsqV4Nr04D9_S1haAxqc2RA8J5tRzgp"/><span class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full bg-emerald-500 ring-2 ring-surface"></span></div><div class="hidden lg:flex flex-col text-left"><span class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors leading-tight">Priya Sharma</span><span class="font-label-sm text-[11px] text-outline leading-tight">Div. Technical Audits</span></div><span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface transition-colors">expand_more</span></div></div></div></header><main class="relative pt-16 w-full min-h-screen bg-surface"><div class="flex flex-col w-full">
+<!-- Top Background Ambient Glow Layer (Contained) -->
+<div class="relative w-full overflow-hidden px-8 py-6 flex flex-col gap-6">
+<div class="absolute -top-32 left-1/4 w-96 h-96 bg-primary-fixed/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-10 right-10 w-80 h-80 bg-secondary-container/30 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<!-- Header & Welcome Bar -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
+<div class="flex flex-col">
+<div class="flex items-center gap-2 mb-1.5">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed animate-pulse"></span>
+            Statutory AI Audit Live
+          </span>
+<span class="font-label-sm text-label-sm text-outline">Session Hash: #ACT-8842-PY</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Good morning, Priya</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Here is what needs your statutory attention today. AICTE Cycle 2026-27 Active.</p>
+</div>
+<!-- Quick Action Controls -->
+<div class="flex items-center gap-3 self-start lg:self-auto">
+<button class="inline-flex items-center gap-2 h-10 px-4 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors shadow-sm font-body-md text-body-md" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">tune</span>
+<span>Filter Worklist</span>
+</button>
+<button class="inline-flex items-center gap-2 h-10 px-4 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-all shadow-sm font-body-md text-body-md" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Batch Endorsement</span>
+</button>
+</div>
+</div>
+<!-- Statutory Advisory Strip -->
+<div class="relative w-full rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden">
+<div class="h-1 w-full bg-gradient-to-r from-primary via-primary-fixed-dim to-tertiary-container"></div>
+<div class="px-5 py-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-surface-container-low/60">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary-container/10 flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">policy</span>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3">
+<span class="font-label-md text-label-md text-primary font-semibold tracking-tight">Preliminary indicator — human review mandated</span>
+<span class="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">AI findings are advisory. Final statutory decisions rest unconditionally with designated AICTE officials.</span>
+</div>
+</div>
+<div class="flex items-center gap-2 flex-shrink-0">
+<span class="font-label-sm text-label-sm text-outline">SEC 10(k) ACT COMPLIANCE</span>
+<span class="material-symbols-outlined text-outline text-[16px]">info</span>
+</div>
+</div>
+</div>
+<!-- Row 1: KPI Metric Cards (4 Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Card 1 -->
+<div class="relative rounded-xl bg-surface-container-lowest p-5 shadow-sm hover:shadow-md transition-shadow group overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-primary via-primary-fixed-dim to-transparent opacity-80"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Applications in Queue</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">move_to_inbox</span>
+</div>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-label-md text-3xl font-bold tracking-tight text-on-surface" data-counter="128">128</span>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-700 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[12px]">arrow_upward</span>
+            +10.2%
+          </span>
+</div>
+<div class="mt-2 flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>+12 received this week</span>
+<!-- Inline Sparkline SVG -->
+<svg class="w-16 h-6 text-primary" fill="none" viewbox="0 0 64 24">
+<path d="M2 18 L14 15 L26 19 L38 9 L50 12 L62 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="relative rounded-xl bg-surface-container-lowest p-5 shadow-sm hover:shadow-md transition-shadow group overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-error via-error-container to-transparent opacity-80"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Flags Awaiting Review</span>
+<div class="w-9 h-9 rounded-lg bg-error-container/40 flex items-center justify-center text-error group-hover:bg-error group-hover:text-on-error transition-colors">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-label-md text-3xl font-bold tracking-tight text-on-surface" data-counter="46">46</span>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+            8 Critical SLA
+          </span>
+</div>
+<div class="mt-2 flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>Requires scrutiny action</span>
+<svg class="w-16 h-6 text-error" fill="none" viewbox="0 0 64 24">
+<path d="M2 10 L14 14 L26 6 L38 18 L50 8 L62 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="relative rounded-xl bg-surface-container-lowest p-5 shadow-sm hover:shadow-md transition-shadow group overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-secondary via-secondary-container to-transparent opacity-80"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Verifications Pending</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</div>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-label-md text-3xl font-bold tracking-tight text-on-surface" data-counter="19">19</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">Avg wait 1.8h</span>
+</div>
+<div class="mt-2 flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>7 cross-dept API tasks</span>
+<svg class="w-16 h-6 text-secondary" fill="none" viewbox="0 0 64 24">
+<path d="M2 14 L14 12 L26 15 L38 11 L50 7 L62 10" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="relative rounded-xl bg-surface-container-lowest p-5 shadow-sm hover:shadow-md transition-shadow group overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-tertiary via-tertiary-fixed to-transparent opacity-80"></div>
+<div class="flex items-start justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Avg. Time to 1st Validation</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-tertiary group-hover:bg-tertiary group-hover:text-on-tertiary transition-colors">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+</div>
+</div>
+<div class="mt-3 flex items-baseline gap-2">
+<span class="font-label-md text-3xl font-bold tracking-tight text-on-surface">4<span class="text-xl">m</span> 12<span class="text-xl">s</span></span>
+<span class="inline-flex items-center gap-0.5 px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-700 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[12px]">arrow_downward</span>
+            -38s
+          </span>
+</div>
+<div class="mt-2 flex items-center justify-between text-body-sm text-on-surface-variant">
+<span>vs previous cycle</span>
+<svg class="w-16 h-6 text-tertiary" fill="none" viewbox="0 0 64 24">
+<path d="M2 6 L14 11 L26 8 L38 16 L50 14 L62 20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Row 2: Charts & Deep Analytics Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Left 8 Cols (2/3 width): Stacked 8-Week Bar Chart -->
+<div class="lg:col-span-8 rounded-2xl bg-surface-container-lowest p-6 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Validation Status by Application</h2>
+<span class="px-2 py-0.5 rounded bg-surface-container text-outline font-label-sm text-[10px] uppercase font-bold">8-Week Trend</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Scrutiny pipeline volume categorized across six statutory lifecycle verdicts</p>
+</div>
+<div class="flex items-center gap-1.5 p-1 bg-surface-container-low rounded-lg text-outline font-label-sm text-label-sm">
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface font-semibold shadow-xs" type="button">Weekly</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface" type="button">Bi-Weekly</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface" type="button">Monthly</button>
+</div>
+</div>
+<!-- Stacked Bar Chart SVG -->
+<div class="w-full h-64 mt-2 relative">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 680 220">
+<!-- Grid lines -->
+<line stroke="#E2E8F0" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="680" y1="30" y2="30"></line>
+<line stroke="#E2E8F0" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="680" y1="80" y2="80"></line>
+<line stroke="#E2E8F0" stroke-dasharray="3 3" stroke-width="1" x1="0" x2="680" y1="130" y2="130"></line>
+<line stroke="#E2E8F0" stroke-width="1" x1="0" x2="680" y1="180" y2="180"></line>
+<!-- Week 1 -->
+<g class="cursor-pointer group">
+<rect fill="#1E9E6A" height="20" rx="3" width="36" x="35" y="160"></rect>
+<rect fill="#3B82F6" height="16" rx="3" width="36" x="35" y="142"></rect>
+<rect fill="#7C5CE0" height="12" rx="3" width="36" x="35" y="128"></rect>
+<rect fill="#E39B1B" height="8" rx="3" width="36" x="35" y="118"></rect>
+<rect fill="#64748B" height="6" rx="3" width="36" x="35" y="110"></rect>
+<rect fill="#D64545" height="10" rx="3" width="36" x="35" y="98"></rect>
+</g>
+<!-- Week 2 -->
+<g class="cursor-pointer group">
+<rect fill="#1E9E6A" height="28" rx="3" width="36" x="115" y="152"></rect>
+<rect fill="#3B82F6" height="18" rx="3" width="36" x="115" y="132"></rect>
+<rect fill="#7C5CE0" height="12" rx="3" width="36" x="115" y="118"></rect>
+<rect fill="#E39B1B" height="10" rx="3" width="36" x="115" y="106"></rect>
+<rect fill="#64748B" height="8" rx="3" width="36" x="115" y="96"></rect>
+<rect fill="#D64545" height="12" rx="3" width="36" x="115" y="82"></rect>
+</g>
+<!-- Week 3 -->
+<g class="cursor-pointer group">
+<rect fill="#1E9E6A" height="35" rx="3" width="36" x="195" y="145"></rect>
+<rect fill="#3B82F6" height="20" rx="3" width="36" x="195" y="123"></rect>
+<rect fill="#7C5CE0" height="13" rx="3" width="36" x="195" y="108"></rect>
+<rect fill="#E39B1B" height="10" rx="3" width="36" x="195" y="96"></rect>
+<rect fill="#64748B" height="6" rx="3" width="36" x="195" y="88"></rect>
+<rect fill="#D64545" height="12" rx="3" width="36" x="195" y="74"></rect>
+</g>
+<!-- Week 4 -->
+<g class="cursor-pointer group">
+<rect fill="#1E9E6A" height="44" rx="3" width="36" x="275" y="136"></rect>
+<rect fill="#3B82F6" height="18" rx="3" width="36" x="275" y="116"></rect>
+<rect fill="#7C5CE0" height="16" rx="3" width="36" x="275" y="98"></rect>
+<rect fill="#E39B1B" height="10" rx="3" width="36" x="275" y="86"></rect>
+<rect fill="#64748B" height="8" rx="3" width="36" x="275" y="76"></rect>
+<rect fill="#D64545" height="14" rx="3" width="36" x="275" y="60"></rect>
+</g>
+<!-- Week 5 -->
+<g class="cursor-pointer group">
+<rect fill="#1E9E6A" height="50" rx="3" width="36" x="355" y="130"></rect>
+<rect fill="#3B82F6" height="22" rx="3" width="36" x="355" y="106"></rect>
+<rect fill="#7C5CE0" height="12" rx="3" width="36" x="355" y="92"></rect>
+<rect fill="#E39B1B" height="10" rx="3" width="36" x="355" y="80"></rect>
+<rect fill="#64748B" height="6" rx="3" width="36" x="355" y="72"></rect>
+<rect fill="#D64545" height="12" rx="3" width="36" x="355" y="58"></rect>
+</g>
+<!-- Week 6 -->
+<g class="cursor-pointer group">
+<rect fill="#1E9E6A" height="60" rx="3" width="36" x="435" y="120"></rect>
+<rect fill="#3B82F6" height="23" rx="3" width="36" x="435" y="95"></rect>
+<rect fill="#7C5CE0" height="15" rx="3" width="36" x="435" y="78"></rect>
+<rect fill="#E39B1B" height="10" rx="3" width="36" x="435" y="66"></rect>
+<rect fill="#64748B" height="6" rx="3" width="36" x="435" y="58"></rect>
+<rect fill="#D64545" height="12" rx="3" width="36" x="435" y="44"></rect>
+</g>
+<!-- Week 7 -->
+<g class="cursor-pointer group">
+<rect fill="#1E9E6A" height="70" rx="3" width="36" x="515" y="110"></rect>
+<rect fill="#3B82F6" height="23" rx="3" width="36" x="515" y="85"></rect>
+<rect fill="#7C5CE0" height="15" rx="3" width="36" x="515" y="68"></rect>
+<rect fill="#E39B1B" height="10" rx="3" width="36" x="515" y="56"></rect>
+<rect fill="#64748B" height="8" rx="3" width="36" x="515" y="46"></rect>
+<rect fill="#D64545" height="12" rx="3" width="36" x="515" y="32"></rect>
+</g>
+<!-- Week 8 (Current) -->
+<g class="cursor-pointer group">
+<rect fill="#1E9E6A" height="80" rx="3" width="36" x="595" y="100"></rect>
+<rect fill="#3B82F6" height="24" rx="3" width="36" x="595" y="74"></rect>
+<rect fill="#7C5CE0" height="16" rx="3" width="36" x="595" y="56"></rect>
+<rect fill="#E39B1B" height="10" rx="3" width="36" x="595" y="44"></rect>
+<rect fill="#64748B" height="6" rx="3" width="36" x="595" y="36"></rect>
+<rect fill="#D64545" height="10" rx="3" width="36" x="595" y="24"></rect>
+</g>
+</svg>
+<!-- Bottom X-Labels -->
+<div class="flex justify-between px-6 pt-2 font-label-sm text-[11px] text-outline">
+<span>W08</span>
+<span>W09</span>
+<span>W10</span>
+<span>W11</span>
+<span>W12</span>
+<span>W13</span>
+<span>W14</span>
+<span class="text-primary font-bold">W15 (Now)</span>
+</div>
+</div>
+</div>
+<!-- 6 Status Legend Strip -->
+<div class="pt-6 mt-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<span class="w-3 h-3 rounded-sm flex-shrink-0" style="background-color: #1E9E6A;"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-[11px] text-outline truncate leading-tight">Verified</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">342</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<span class="w-3 h-3 rounded-sm flex-shrink-0" style="background-color: #D64545;"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-[11px] text-outline truncate leading-tight">Mismatch</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">46</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<span class="w-3 h-3 rounded-sm flex-shrink-0" style="background-color: #E39B1B;"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-[11px] text-outline truncate leading-tight">Expired</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">28</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<span class="w-3 h-3 rounded-sm flex-shrink-0" style="background-color: #3B82F6;"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-[11px] text-outline truncate leading-tight">Pending</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">58</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<span class="w-3 h-3 rounded-sm flex-shrink-0" style="background-color: #64748B;"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-[11px] text-outline truncate leading-tight">Source unavail</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">14</span>
+</div>
+</div>
+<div class="flex items-center gap-2 p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors">
+<span class="w-3 h-3 rounded-sm flex-shrink-0" style="background-color: #7C5CE0;"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-[11px] text-outline truncate leading-tight">Manual rev</span>
+<span class="font-label-md text-label-md font-semibold text-on-surface">39</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right 4 Cols (1/3 width): Donut Chart Flags Breakdown -->
+<div class="lg:col-span-4 rounded-2xl bg-surface-container-lowest p-6 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-3">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Open Flags by Type</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Active algorithmic triggers</p>
+</div>
+<button class="p-1.5 rounded-lg text-outline hover:bg-surface-container transition-colors" title="Export Flag Taxonomy" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+<!-- Donut Graphic Visualizer -->
+<div class="relative w-48 h-48 mx-auto my-4 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 100 100">
+<!-- Background Ring -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#E2E8F0" stroke-width="12"></circle>
+<!-- Missing document (14 / 46 = 30.4%) -> circumference 238.76 -> stroke-dasharray ~72.5 166.2 -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#D64545" stroke-dasharray="72.5 238.7" stroke-dashoffset="0" stroke-linecap="butt" stroke-width="12"></circle>
+<!-- Expired document (11 / 46 = 23.9%) -> ~57.0 -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#E39B1B" stroke-dasharray="57.0 238.7" stroke-dashoffset="-72.5" stroke-linecap="butt" stroke-width="12"></circle>
+<!-- Inconsistent data (9 / 46 = 19.5%) -> ~46.5 -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#7C5CE0" stroke-dasharray="46.5 238.7" stroke-dashoffset="-129.5" stroke-linecap="butt" stroke-width="12"></circle>
+<!-- Possible duplicate (7 / 46 = 15.2%) -> ~36.2 -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#3B82F6" stroke-dasharray="36.2 238.7" stroke-dashoffset="-176.0" stroke-linecap="butt" stroke-width="12"></circle>
+<!-- Possible alteration (5 / 46 = 10.8%) -> ~25.8 -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#0F7B8A" stroke-dasharray="25.8 238.7" stroke-dashoffset="-212.2" stroke-linecap="butt" stroke-width="12"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">46</span>
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Total Flags</span>
+</div>
+</div>
+<!-- Breakdown List -->
+<div class="space-y-2 mt-2">
+<div class="flex items-center justify-between p-1.5 rounded-lg hover:bg-surface-container-low transition-colors text-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full" style="background-color: #D64545;"></span>
+<span class="text-on-surface">Missing document</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm font-semibold text-on-surface">14</span>
+<span class="font-label-sm text-[11px] text-outline">30.4%</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded-lg hover:bg-surface-container-low transition-colors text-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full" style="background-color: #E39B1B;"></span>
+<span class="text-on-surface">Expired document</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm font-semibold text-on-surface">11</span>
+<span class="font-label-sm text-[11px] text-outline">23.9%</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded-lg hover:bg-surface-container-low transition-colors text-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full" style="background-color: #7C5CE0;"></span>
+<span class="text-on-surface">Inconsistent data</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm font-semibold text-on-surface">9</span>
+<span class="font-label-sm text-[11px] text-outline">19.5%</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded-lg hover:bg-surface-container-low transition-colors text-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full" style="background-color: #3B82F6;"></span>
+<span class="text-on-surface">Possible duplicate</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm font-semibold text-on-surface">7</span>
+<span class="font-label-sm text-[11px] text-outline">15.2%</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded-lg hover:bg-surface-container-low transition-colors text-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full" style="background-color: #0F7B8A;"></span>
+<span class="text-on-surface">Possible alteration</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm font-semibold text-on-surface">5</span>
+<span class="font-label-sm text-[11px] text-outline">10.8%</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 bg-surface-container-low rounded-xl p-3 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">auto_fix_high</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Confidence Score: 98.4%</span>
+</div>
+<span class="font-label-sm text-[11px] text-outline">v4.2 Rule-set</span>
+</div>
+</div>
+</div>
+<!-- Row 3: Priority Attention Worklist + Live Scrutiny Feed -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Left 7 Cols (3/5 width approx): Needs Your Attention Queue -->
+<div class="lg:col-span-7 flex flex-col gap-4">
+<div class="flex items-center justify-between px-1">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Needs Your Attention</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Priority cases flagged for immediate human adjudication</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-outline">5 of 128 queued</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-body-sm text-body-sm" type="button">View full list</button>
+</div>
+</div>
+<!-- Application Cards Stack -->
+<div class="flex flex-col gap-3">
+<!-- Item 1: High Risk -->
+<div class="group relative rounded-xl bg-surface-container-lowest p-4 shadow-sm hover:shadow-md transition-all">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error flex-shrink-0"></span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface group-hover:text-primary transition-colors">Northfield Institute of Technology</h3>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-outline">APP-2026-00417</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  HIGH RISK
+                </span>
+<span class="hidden sm:inline-flex px-2 py-0.5 rounded-full bg-surface-container text-outline font-label-sm text-[10px]">PRELIMINARY INDICATOR</span>
+</div>
+</div>
+<div class="mt-3 p-3 rounded-lg bg-error-container/20 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-error text-[18px] flex-shrink-0 mt-0.5">error</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">Fire safety NOC expired 14 days before academic session start. Structural clearance missing renewal stamp.</p>
+</div>
+<div class="mt-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2">
+<div class="flex items-center gap-3">
+<!-- Mini SLA countdown indicator -->
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-error font-medium">
+<svg class="w-4 h-4 text-error" viewbox="0 0 24 24">
+<circle cx="12" cy="12" fill="none" r="9" stroke="#ffdad6" stroke-width="2.5"></circle>
+<circle cx="12" cy="12" fill="none" r="9" stroke="currentColor" stroke-dasharray="56.5" stroke-dashoffset="18" stroke-width="2.5"></circle>
+</svg>
+<span>4h 15m remaining</span>
+</div>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-outline">Assigned to: Technical Scrutiny Panel A</span>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-colors font-body-sm text-body-sm font-medium self-end sm:self-auto" type="button">
+<span>Inspect Dossier</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Item 2: High Risk Duplicate Faculty -->
+<div class="group relative rounded-xl bg-surface-container-lowest p-4 shadow-sm hover:shadow-md transition-all">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error flex-shrink-0"></span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface group-hover:text-primary transition-colors">Kalinga Institute of Advanced Sciences</h3>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-outline">APP-2026-00892</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  HIGH RISK
+                </span>
+<span class="hidden sm:inline-flex px-2 py-0.5 rounded-full bg-surface-container text-outline font-label-sm text-[10px]">PRELIMINARY INDICATOR</span>
+</div>
+</div>
+<div class="mt-3 p-3 rounded-lg bg-error-container/20 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-error text-[18px] flex-shrink-0 mt-0.5">group_off</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">Faculty ID duplicate detected across 3 institutions. Prof. Rajesh Varma submitted in concurrent Full-Time Dean roles.</p>
+</div>
+<div class="mt-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2">
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-error font-medium">
+<svg class="w-4 h-4 text-error" viewbox="0 0 24 24">
+<circle cx="12" cy="12" fill="none" r="9" stroke="#ffdad6" stroke-width="2.5"></circle>
+<circle cx="12" cy="12" fill="none" r="9" stroke="currentColor" stroke-dasharray="56.5" stroke-dashoffset="24" stroke-width="2.5"></circle>
+</svg>
+<span>6h 30m remaining</span>
+</div>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-outline">Aadhaar Bio-Check Mismatch</span>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-colors font-body-sm text-body-sm font-medium self-end sm:self-auto" type="button">
+<span>Inspect Dossier</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Item 3: Medium Risk Area Variance -->
+<div class="group relative rounded-xl bg-surface-container-lowest p-4 shadow-sm hover:shadow-md transition-all">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<span class="w-2.5 h-2.5 rounded-full bg-amber-500 flex-shrink-0"></span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface group-hover:text-primary transition-colors">Malabar Valley College of Engineering</h3>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-outline">APP-2026-00305</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-500/15 text-amber-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                  MEDIUM RISK
+                </span>
+<span class="hidden sm:inline-flex px-2 py-0.5 rounded-full bg-surface-container text-outline font-label-sm text-[10px]">PRELIMINARY INDICATOR</span>
+</div>
+</div>
+<div class="mt-3 p-3 rounded-lg bg-amber-500/10 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-amber-700 text-[18px] flex-shrink-0 mt-0.5">square_foot</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">Built-up area declared (18,400 sqm) deviates +34% from municipal sanction plan approved in 2024.</p>
+</div>
+<div class="mt-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2">
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-amber-700 font-medium">
+<svg class="w-4 h-4 text-amber-600" viewbox="0 0 24 24">
+<circle cx="12" cy="12" fill="none" r="9" stroke="#fef3c7" stroke-width="2.5"></circle>
+<circle cx="12" cy="12" fill="none" r="9" stroke="currentColor" stroke-dasharray="56.5" stroke-dashoffset="36" stroke-width="2.5"></circle>
+</svg>
+<span>12h 00m remaining</span>
+</div>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-outline">Geo-tagging variance: 0.12km</span>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-body-sm text-body-sm font-medium self-end sm:self-auto" type="button">
+<span>Inspect Dossier</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Item 4: Medium Risk Portal Latency -->
+<div class="group relative rounded-xl bg-surface-container-lowest p-4 shadow-sm hover:shadow-md transition-all">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<span class="w-2.5 h-2.5 rounded-full bg-amber-500 flex-shrink-0"></span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface group-hover:text-primary transition-colors">Deccan Polytechnic Academy</h3>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-outline">APP-2026-00714</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-500/15 text-amber-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
+                  MEDIUM RISK
+                </span>
+<span class="hidden sm:inline-flex px-2 py-0.5 rounded-full bg-surface-container text-outline font-label-sm text-[10px]">PRELIMINARY INDICATOR</span>
+</div>
+</div>
+<div class="mt-3 p-3 rounded-lg bg-surface-container-low flex items-start gap-2.5">
+<span class="material-symbols-outlined text-outline text-[18px] flex-shrink-0 mt-0.5">cloud_off</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">Land title registry verification source unavailable (State Portal 503). Manual registrar seal corroboration requested.</p>
+</div>
+<div class="mt-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2">
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-secondary font-medium">
+<svg class="w-4 h-4 text-secondary" viewbox="0 0 24 24">
+<circle cx="12" cy="12" fill="none" r="9" stroke="#d6e3ff" stroke-width="2.5"></circle>
+<circle cx="12" cy="12" fill="none" r="9" stroke="currentColor" stroke-dasharray="56.5" stroke-dashoffset="44" stroke-width="2.5"></circle>
+</svg>
+<span>18h 45m remaining</span>
+</div>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-outline">Gov Portal Retrying</span>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-body-sm text-body-sm font-medium self-end sm:self-auto" type="button">
+<span>Inspect Dossier</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Item 5: Low Risk Routine Renewal -->
+<div class="group relative rounded-xl bg-surface-container-lowest p-4 shadow-sm hover:shadow-md transition-all">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<div class="flex items-center gap-2.5">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500 flex-shrink-0"></span>
+<h3 class="font-headline-sm text-headline-sm font-semibold text-on-surface group-hover:text-primary transition-colors">Vidya Sagar Technical Campus</h3>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-outline">APP-2026-00198</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-800 font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                  LOW RISK
+                </span>
+<span class="hidden sm:inline-flex px-2 py-0.5 rounded-full bg-surface-container text-outline font-label-sm text-[10px]">PRELIMINARY INDICATOR</span>
+</div>
+</div>
+<div class="mt-3 p-3 rounded-lg bg-emerald-500/10 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-emerald-700 text-[18px] flex-shrink-0 mt-0.5">check_circle</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">Routine EoA renewal; 1 minor laboratory equipment variance (CAD lab workstation count 58/60 required).</p>
+</div>
+<div class="mt-3.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2">
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-emerald-700 font-medium">
+<svg class="w-4 h-4 text-emerald-600" viewbox="0 0 24 24">
+<circle cx="12" cy="12" fill="none" r="9" stroke="#dcfce7" stroke-width="2.5"></circle>
+<circle cx="12" cy="12" fill="none" r="9" stroke="currentColor" stroke-dasharray="56.5" stroke-dashoffset="50" stroke-width="2.5"></circle>
+</svg>
+<span>24h 00m remaining</span>
+</div>
+<span class="text-outline-variant">•</span>
+<span class="font-body-sm text-body-sm text-outline">Fast-track candidate</span>
+</div>
+<button class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-body-sm text-body-sm font-medium self-end sm:self-auto" type="button">
+<span>Inspect Dossier</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right 5 Cols (2/5 width approx): Live Scrutiny Alerts Feed -->
+<div class="lg:col-span-5 flex flex-col gap-4">
+<div class="flex items-center justify-between px-1">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Live Scrutiny Alerts</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time OCR and database discrepancy stream</p>
+</div>
+<button class="px-2.5 py-1 rounded text-primary hover:bg-primary-container/10 transition-colors font-label-sm text-label-sm font-semibold" type="button">
+            Mark all read
+          </button>
+</div>
+<div class="rounded-2xl bg-surface-container-lowest p-4 shadow-sm flex flex-col gap-3">
+<!-- Alert 1 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex items-start gap-3 group cursor-pointer">
+<div class="w-9 h-9 rounded-lg bg-error-container text-on-error-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">assignment_late</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-body-md text-body-md font-semibold text-on-surface truncate">Northfield Tech NOC Fire Certificate Expired</span>
+<span class="font-label-sm text-[11px] text-outline flex-shrink-0">12m ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">Document timestamp 2023-11-04 is past 1-year statutory validity ceiling. AI OCR confidence: 99.2%.</p>
+<div class="mt-2 flex items-center gap-2">
+<span class="font-label-sm text-[10px] text-error font-medium uppercase px-2 py-0.5 rounded bg-error-container/40">Critical Violation</span>
+<span class="font-label-sm text-[10px] text-outline">Doc #FC-8819</span>
+</div>
+</div>
+</div>
+<!-- Alert 2 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex items-start gap-3 group cursor-pointer">
+<div class="w-9 h-9 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">cloud_sync</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-body-md text-body-md font-semibold text-on-surface truncate">State Revenue Portal Latency &gt; 15s</span>
+<span class="font-label-sm text-[11px] text-outline flex-shrink-0">28m ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">Land survey queries to Karnataka Bhoomi Gateway timed out. Queued 4 pending background retries.</p>
+<div class="mt-2 flex items-center gap-2">
+<span class="font-label-sm text-[10px] text-secondary font-medium uppercase px-2 py-0.5 rounded bg-secondary-container">Infrastructure</span>
+<span class="font-label-sm text-[10px] text-outline">HTTP 504 Timeout</span>
+</div>
+</div>
+</div>
+<!-- Alert 3 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex items-start gap-3 group cursor-pointer">
+<div class="w-9 h-9 rounded-lg bg-tertiary-container/20 text-tertiary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">person_pin</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-body-md text-body-md font-semibold text-on-surface truncate">Faculty F-7F3A registered at Kalinga &amp; Deccan</span>
+<span class="font-label-sm text-[11px] text-outline flex-shrink-0">45m ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">Biometric cryptographic hash matches AICTE Master Faculty Index across two competing dossiers.</p>
+<div class="mt-2 flex items-center gap-2">
+<span class="font-label-sm text-[10px] text-tertiary font-medium uppercase px-2 py-0.5 rounded bg-tertiary-container/20">Integrity Breach</span>
+<span class="font-label-sm text-[10px] text-outline">Match Score 1.0</span>
+</div>
+</div>
+</div>
+<!-- Alert 4 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex items-start gap-3 group cursor-pointer">
+<div class="w-9 h-9 rounded-lg bg-amber-500/15 text-amber-800 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">difference</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1">
+<span class="font-body-md text-body-md font-semibold text-on-surface truncate">Architect PDF metadata updated post-signature</span>
+<span class="font-label-sm text-[11px] text-outline flex-shrink-0">1h ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-2">COA Certificate hash invalidated by local Acrobat alteration timestamp. Requires physical blueprint seal check.</p>
+<div class="mt-2 flex items-center gap-2">
+<span class="font-label-sm text-[10px] text-amber-800 font-medium uppercase px-2 py-0.5 rounded bg-amber-500/15">Hash Discrepancy</span>
+<span class="font-label-sm text-[10px] text-outline">SHA256 Mismatch</span>
+</div>
+</div>
+</div>
+<!-- Institutional Scrutiny Progress Meter -->
+<div class="mt-2 pt-4 px-2 flex flex-col gap-2">
+<div class="flex items-center justify-between text-body-sm">
+<span class="font-semibold text-on-surface">Daily Scrutiny Quota (Officer Priya)</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">14 / 20 Cases (70%)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 70%"></div>
+</div>
+<span class="font-label-sm text-[10px] text-outline">SLA deadline resets today at 18:00 IST</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Statutory Section 10(k) Legal Footnote -->
+<div class="rounded-xl bg-surface-container-low px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4 mt-2">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline text-[22px]">gavel</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          All algorithmic scrutiny flags operate under <strong class="text-on-surface font-semibold">AICTE Act Sec 10(k)</strong>. The interface never auto-rejects; scrutiny officers hold complete determinative authority.
+        </p>
+</div>
+<div class="flex items-center gap-4 flex-shrink-0 text-outline font-label-sm text-label-sm">
+<span>Build v2026.4.1</span>
+<span>•</span>
+<span>NIC Secure Enclave</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interaction: Animated Count-up for Metric Numbers
+  document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('[data-counter]');
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-counter');
+      let count = 0;
+      const speed = 25;
+      const increment = Math.ceil(target / 15);
+      
+      const updateCount = () => {
+        count += increment;
+        if (count < target) {
+          counter.innerText = count;
+          setTimeout(updateCount, speed);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCount();
+    });
+  });
+</script></main></div></body></html>

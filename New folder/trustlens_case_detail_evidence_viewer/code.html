@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><title>TrustLens — AICTE Statutory Scrutiny Engine</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#cdbdff", "outline-variant": "#bec8cb", "inverse-on-surface": "#eef1f4", "on-secondary": "#ffffff", "surface": "#f7fafd", "on-background": "#181c1e", "outline": "#6e797b", "primary": "#00616d", "on-primary-fixed": "#001f24", "on-primary-fixed-variant": "#004e59", "surface-container": "#ebeef1", "surface-tint": "#006876", "error": "#ba1a1a", "on-tertiary-container": "#f9f2ff", "surface-variant": "#e0e3e6", "secondary": "#4d5f7d", "primary-fixed": "#9eefff", "surface-bright": "#f7fafd", "on-error-container": "#93000a", "surface-container-high": "#e5e8eb", "tertiary": "#5f3dc1", "primary-fixed-dim": "#7dd3e4", "inverse-primary": "#7dd3e4", "on-secondary-container": "#4e607e", "on-secondary-fixed-variant": "#364764", "surface-dim": "#d7dadd", "on-surface-variant": "#3e494b", "surface-container-lowest": "#ffffff", "primary-container": "#0f7b8a", "surface-container-low": "#f1f4f7", "secondary-fixed": "#d6e3ff", "on-primary": "#ffffff", "secondary-fixed-dim": "#b5c7ea", "background": "#f7fafd", "on-tertiary-fixed-variant": "#4e28b0", "tertiary-fixed": "#e8deff", "inverse-surface": "#2d3133", "surface-container-highest": "#e0e3e6", "on-error": "#ffffff", "on-surface": "#181c1e", "on-secondary-fixed": "#071c36", "tertiary-container": "#7858dc", "error-container": "#ffdad6", "on-tertiary": "#ffffff", "on-tertiary-fixed": "#20005f", "secondary-container": "#c8dbfe", "on-primary-container": "#dff9ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin-mobile": "1rem", "space-xs": "0.25rem", "space-md": "1rem", "margin": "2rem", "gutter": "1.5rem", "space-xl": "2rem", "space-lg": "1.5rem", "gutter-mobile": "0.75rem", "space-sm": "0.5rem" }, "fontFamily": { "headline-xl-mobile": ["Inter"], "body-sm": ["Inter"], "headline-lg": ["Inter"], "headline-sm": ["Inter"], "headline-xl": ["Inter"], "label-sm": ["JetBrains Mono"], "label-md": ["JetBrains Mono"], "body-lg": ["Inter"], "body-md": ["Inter"] }, "fontSize": { "headline-xl-mobile": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-sm": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-sm": ["1.125rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.025em", "fontWeight": "600" }], "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-md": ["0.8125rem", { "lineHeight": "1rem", "letterSpacing": "-0.01em", "fontWeight": "500" }], "body-lg": ["1rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.011em", "fontWeight": "400" }], "body-md": ["0.875rem", { "lineHeight": "1.25rem", "letterSpacing": "-0.006em", "fontWeight": "400" }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen selection:bg-primary-container selection:text-on-primary"><aside class="fixed left-0 top-0 h-screen w-[248px] bg-[#0B1F3A] border-r border-[#1E293B] z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="h-16 px-4 flex items-center gap-3 border-b border-[#1E293B]"><img alt="TrustLens Brand Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkueI08uPal4YHNxJR035ir6Q2gKWu8KvzPmwxRAVP-96qiNlrGRp0orR_4HlSjxvhsxZjGnMv_E2rRdxiliZZ2gL2bqb9XafoK1T5bWA_JoAyUIAqzBpmba9_ejnTUJr7RzTZYcQAHffTbgXelcw-IaKGGsLTSH1c1Hnb0MJ63ACQD3Ob-1YsA3XAv3Obgt9Kfv-j2BUl1Abntuv_GpSJou_jCrtyRL-sBj0IniauUhinEW1y-fYb"/><div class="flex flex-col min-w-0 leading-tight"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-white truncate">TrustLens</span><span class="font-label-sm text-[10px] tracking-wider uppercase text-slate-400 truncate">AICTE Scrutiny Portal</span></div></div><div class="px-3 pt-3 pb-1"><span class="font-label-sm text-[10px] uppercase font-semibold text-slate-400 tracking-wider px-2">Statutory Operations</span></div><nav class="flex flex-col gap-0.5 px-2.5 overflow-y-auto" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 font-body-md text-body-md hover:bg-slate-800/80 hover:text-white transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-primary-fixed">dashboard</span><span class="truncate">Overview</span></a><a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 font-body-md text-body-md hover:bg-slate-800/80 hover:text-white transition-colors" data-path="applications-queue" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-primary-fixed">move_to_inbox</span><span class="truncate">Applications Queue</span></a><a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 font-body-md text-body-md hover:bg-slate-800/80 hover:text-white transition-colors" data-path="case-detail-evidence" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-primary-fixed">find_in_page</span><span class="truncate">Case Detail &amp; Evidence</span></a><a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 font-body-md text-body-md hover:bg-slate-800/80 hover:text-white transition-colors" data-path="evidence-graph" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-primary-fixed">hub</span><span class="truncate">Evidence Graph</span></a><a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 font-body-md text-body-md hover:bg-slate-800/80 hover:text-white transition-colors" data-path="verification-center" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-primary-fixed">verified_user</span><span class="truncate">Verification Center</span></a><a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 font-body-md text-body-md hover:bg-slate-800/80 hover:text-white transition-colors" data-path="compliance-assistant" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-primary-fixed">rule_settings</span><span class="truncate">Compliance Assistant</span></a><a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 font-body-md text-body-md hover:bg-slate-800/80 hover:text-white transition-colors" data-path="audit-trail" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-primary-fixed">history_toggle_off</span><span class="truncate">Audit Trail</span></a><div class="my-2 border-t border-[#1E293B]/80 mx-1"></div><a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 font-body-md text-body-md hover:bg-slate-800/80 hover:text-white transition-colors" data-path="rules-clauses" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-primary-fixed">menu_book</span><span class="truncate">Rules &amp; Clauses</span></a><a class="group flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-300 font-body-md text-body-md hover:bg-slate-800/80 hover:text-white transition-colors" data-path="role-access" href="#"><span class="material-symbols-outlined text-[19px] text-slate-400 group-hover:text-primary-fixed">admin_panel_settings</span><span class="truncate">Role &amp; Access</span></a></nav></div><div class="p-3 border-t border-[#1E293B] bg-[#08172c]/90 flex flex-col gap-2.5"><div class="flex items-center justify-between text-slate-400 font-label-sm text-label-sm"><div class="flex items-center gap-1.5"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span></span><span class="text-slate-300">Synced 2m ago</span></div><span class="material-symbols-outlined text-slate-400 text-sm hover:text-white cursor-pointer">sync</span></div><div class="flex items-center gap-2 px-2.5 py-1.5 rounded bg-slate-900/80 border border-slate-700/60"><span class="material-symbols-outlined text-emerald-400 text-base">security</span><div class="flex flex-col min-w-0"><span class="font-label-sm text-[10px] text-slate-200 tracking-wide uppercase font-semibold leading-none">Gov Sec L3 Signed</span><span class="font-label-sm text-[9px] text-slate-400 truncate mt-0.5">NIC Cert #9042-AICTE</span></div></div></div></aside><div class="pl-[248px]"><header class="fixed top-0 left-[248px] right-0 h-16 bg-surface/90 backdrop-blur-xl border-b border-[#E2E8F0] z-40 flex items-center justify-between px-6"><div class="flex items-center gap-3.5 flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full h-9 pl-9 pr-14 bg-surface-container-low border border-outline-variant/60 rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:bg-surface-container-lowest transition-all" placeholder="Search institutions, application IDs, faculty pins, or document hashes..." type="text"/><kbd class="absolute right-2.5 top-1/2 -translate-y-1/2 px-1.5 py-0.5 font-label-sm text-[10px] text-outline bg-surface-container rounded border border-outline-variant/80 select-none">⌘K</kbd></div><div class="hidden xl:flex items-center gap-1.5 h-9 px-3 rounded-full bg-surface-container-low border border-outline-variant/50 text-on-surface-variant font-label-md text-label-md select-none flex-shrink-0"><span class="material-symbols-outlined text-primary text-[17px]">calendar_today</span><span>AY 2026-27: Q1 Cycle</span><span class="material-symbols-outlined text-[15px] text-outline">expand_more</span></div></div><div class="flex items-center gap-4"><div class="hidden 2xl:flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/10 border border-primary/20"><span class="material-symbols-outlined text-primary text-[15px]">memory</span><span class="font-label-sm text-label-sm font-medium text-primary tracking-tight">AI Advisory Engine Active • Human In Loop</span></div><button aria-label="Notifications" class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 min-w-[16px] px-1 items-center justify-center rounded-full bg-error text-on-error font-label-sm text-[9px] font-semibold">3</span></button><div class="flex items-center gap-1 p-1 bg-surface-container-high rounded-lg"><button aria-label="Light theme" class="p-1 rounded bg-surface-container-lowest text-on-surface shadow-xs" type="button"><span class="material-symbols-outlined text-[17px]">light_mode</span></button><button aria-label="Dark theme" class="p-1 rounded text-on-surface-variant hover:text-on-surface" type="button"><span class="material-symbols-outlined text-[17px]">dark_mode</span></button></div><div class="h-5 w-[1px] bg-outline-variant/60"></div><div class="flex items-center gap-3"><span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high font-label-sm text-label-sm font-semibold text-primary border border-outline-variant/40"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Scrutiny Officer</span><div class="flex items-center gap-2 cursor-pointer group"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1-P71WJq5PmTDFNREwKAK3x90HjmgFtJXj2JbhyHc32rhaDUCyE7Rh56cisCFfZ1B8eNaaUl-GZ7xh0qwf18AAdY0goadCUZVWo6T-Ufii10VQzYIrfckyun4meyVwD-HVNWnKBBVc1WQY0zXe2I4jKEA-6UCudxe0zwgKw2uyzzUYYBemIXlQJnWhxR3K9-JXeakl_7YnSPI-ZFmbThNKwvSB6bJa87uFb-GZN2vLGlxy2guhl4V"/><span class="absolute bottom-0 right-0 h-2.5 w-2.5 rounded-full bg-emerald-500 ring-2 ring-surface"></span></div><div class="hidden lg:flex flex-col text-left"><span class="font-body-md text-body-md font-semibold text-on-surface group-hover:text-primary transition-colors leading-tight">Priya Sharma</span><span class="font-label-sm text-[11px] text-outline leading-tight">Div. Technical Audits</span></div><span class="material-symbols-outlined text-[16px] text-outline group-hover:text-on-surface transition-colors">expand_more</span></div></div></div></header><main class="relative pt-16 w-full min-h-screen bg-surface"><div class="flex flex-col w-full">
+<!-- Top Statutory Summary Header Strip -->
+<div class="px-6 py-5 bg-surface-container-lowest shadow-sm flex flex-col gap-4">
+<div class="flex flex-wrap items-center justify-between gap-4">
+<!-- Institution Meta & Scrutiny Identifiers -->
+<div class="flex flex-col gap-1.5 min-w-0">
+<div class="flex flex-wrap items-center gap-2.5">
+<span class="font-label-md text-label-md px-2.5 py-0.5 rounded bg-surface-container-high text-primary font-semibold tracking-wider">
+            APP-2026-00417
+          </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">domain_verification</span>
+            EoA Extension of Approval 2026-27
+          </span>
+<!-- Overall Status -->
+<span class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px]">pending_actions</span>
+            Manual review required
+          </span>
+<!-- Risk Tier with Clickable Popover Trigger -->
+<div class="relative">
+<button class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold hover:opacity-90 transition-opacity" id="riskPopoverTrigger" type="button">
+<span class="h-2 w-2 rounded-full bg-error animate-pulse"></span>
+              HIGH RISK TIER
+              <span class="material-symbols-outlined text-[14px]">info</span>
+</button>
+<!-- Risk Tier Weights Popover -->
+<div class="hidden absolute left-0 top-full mt-2 w-80 p-4 rounded-xl bg-surface-container-lowest shadow-xl z-50" id="riskPopover">
+<div class="flex items-center justify-between pb-2 mb-3">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Tier Weight Contributing Factors</span>
+<span class="font-label-sm text-label-sm text-error font-bold">Aggregate 88/100</span>
+</div>
+<div class="space-y-3">
+<div>
+<div class="flex justify-between text-body-sm font-body-sm text-on-surface mb-1">
+<span>Fire safety NOC lapse</span>
+<span class="font-label-sm text-label-sm font-bold text-error">42%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 42%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-body-sm font-body-sm text-on-surface mb-1">
+<span>Faculty duplication cross-index</span>
+<span class="font-label-sm text-label-sm font-bold text-error">35%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 35%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-body-sm font-body-sm text-on-surface mb-1">
+<span>Municipal GIS area variance (+33%)</span>
+<span class="font-label-sm text-label-sm font-bold text-tertiary">23%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary rounded-full" style="width: 23%"></div>
+</div>
+</div>
+</div>
+<p class="mt-3 text-body-sm font-body-sm text-outline">Risk computed via AICTE Rule Model v4.8 against statutory mandates.</p>
+</div>
+</div>
+</div>
+<div class="flex items-baseline gap-3">
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+            Northfield Institute of Technology
+          </h1>
+<span class="font-body-sm text-body-sm text-outline">Permanent ID: 1-84920491 • State: Delhi NCT</span>
+</div>
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[16px]">badge</span>
+<span>Assigned Scrutiny Officer:</span>
+<span class="font-semibold text-on-surface">Priya Sharma (Region-North Technical Audits)</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-outline">Assigned 12-Feb-2026 09:30 IST</span>
+</div>
+</div>
+<!-- Action CTAs -->
+<div class="flex items-center gap-2.5">
+<button class="h-10 px-3.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-md text-body-md font-medium flex items-center gap-2 shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">file_download</span>
+<span>Export Case Dossier</span>
+</button>
+<button class="h-10 px-3.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-md text-body-md font-medium flex items-center gap-2 shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">contact_support</span>
+<span>Request Clarification</span>
+</button>
+<button class="h-10 px-5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-body-md text-body-md font-semibold flex items-center gap-2 shadow-md transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Finalize Determination</span>
+</button>
+</div>
+</div>
+<!-- Case Stepper Horizontal Progression -->
+<div class="pt-2">
+<div class="grid grid-cols-5 gap-2 relative">
+<!-- Step 1 -->
+<div class="flex items-center gap-3 p-2.5 rounded-lg bg-surface-container-low">
+<div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-on-primary flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-sm text-label-sm uppercase font-semibold text-primary">1. Intake</div>
+<div class="font-body-sm text-body-sm text-outline truncate">Completed 11-Feb</div>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex items-center gap-3 p-2.5 rounded-lg bg-surface-container-low">
+<div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-on-primary flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-sm text-label-sm uppercase font-semibold text-primary">2. Extraction</div>
+<div class="font-body-sm text-body-sm text-outline truncate">OCR Verified (42 Docs)</div>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex items-center gap-3 p-2.5 rounded-lg bg-surface-container-low">
+<div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-on-primary flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-sm text-label-sm uppercase font-semibold text-primary">3. Validation</div>
+<div class="font-body-sm text-body-sm text-outline truncate">Rules Executed (14/17)</div>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex items-center gap-3 p-2.5 rounded-lg bg-primary-container/15 relative overflow-hidden">
+<div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-on-primary flex-shrink-0 shadow-sm relative">
+<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-sm text-label-sm uppercase font-bold text-primary flex items-center gap-1.5">
+<span>4. Verification</span>
+<span class="h-1.5 w-1.5 rounded-full bg-primary animate-ping"></span>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface font-medium truncate">Active In-Progress</div>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="flex items-center gap-3 p-2.5 rounded-lg bg-surface-container-low opacity-60">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest flex items-center justify-center text-outline flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">gavel</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-sm text-label-sm uppercase font-semibold text-outline">5. Officer Review</div>
+<div class="font-body-sm text-body-sm text-outline truncate">Pending Determination</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Workspace Split Layout (58% Left Document Inspector, 42% Right AI Findings Panel) -->
+<div class="p-6 grid grid-cols-12 gap-6">
+<!-- Left Column: Document & Evidence Inspector -->
+<div class="col-span-12 xl:col-span-7 flex flex-col gap-4">
+<!-- Toolbar Controls Card -->
+<div class="bg-surface-container-lowest p-3 rounded-xl shadow-sm flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2 min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px]">picture_as_pdf</span>
+<!-- Document Selector -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-low text-on-surface font-body-md text-body-md pl-3 pr-8 py-1.5 rounded-lg focus:outline-none focus:bg-surface-container cursor-pointer">
+<option selected="">Fire Safety NOC - Form B-4.pdf [Page 2 of 4]</option>
+<option>Faculty Roster AY26-27 - Verified biometric.pdf</option>
+<option>Cadastral Survey Map Delhi DDA-2024.pdf</option>
+<option>Architectural Floor Sanction - Block A &amp; B.pdf</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-[18px] text-outline pointer-events-none">expand_more</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-secondary-container/50 font-label-sm text-label-sm font-semibold text-on-secondary-container">
+<span class="material-symbols-outlined text-[14px]">document_scanner</span>
+            OCR 98.4%
+          </span>
+</div>
+<!-- Zoom, Rotate and Municipal Overlay Controls -->
+<div class="flex items-center gap-1.5">
+<div class="flex items-center bg-surface-container-low rounded-lg p-0.5">
+<button aria-label="Zoom out" class="p-1.5 rounded text-outline hover:text-on-surface hover:bg-surface-container" type="button"><span class="material-symbols-outlined text-[18px]">zoom_out</span></button>
+<span class="font-label-sm text-label-sm px-2 text-on-surface font-medium">100%</span>
+<button aria-label="Zoom in" class="p-1.5 rounded text-outline hover:text-on-surface hover:bg-surface-container" type="button"><span class="material-symbols-outlined text-[18px]">zoom_in</span></button>
+<button aria-label="Fit to width" class="p-1.5 rounded text-outline hover:text-on-surface hover:bg-surface-container" type="button"><span class="material-symbols-outlined text-[18px]">fit_screen</span></button>
+<button aria-label="Rotate document" class="p-1.5 rounded text-outline hover:text-on-surface hover:bg-surface-container" type="button"><span class="material-symbols-outlined text-[18px]">rotate_right</span></button>
+</div>
+<button class="h-8 px-3 rounded-lg bg-surface-container text-primary font-body-sm text-body-sm font-semibold flex items-center gap-1.5 hover:bg-surface-container-high transition-colors" id="toggleSplitCompare" type="button">
+<span class="material-symbols-outlined text-[16px]">compare</span>
+<span>Split Municipal Registry</span>
+</button>
+</div>
+</div>
+<!-- Scanned PDF Inspection Canvas -->
+<div class="relative bg-surface-container-low rounded-xl shadow-sm p-4 flex gap-4 min-h-[760px]">
+<!-- Thumbnail Rail on the Left -->
+<div class="w-20 flex flex-col gap-3 flex-shrink-0 select-none">
+<div class="cursor-pointer group flex flex-col items-center">
+<div class="w-16 h-20 bg-surface-container-lowest rounded-md shadow-sm overflow-hidden p-1 flex flex-col justify-between opacity-70 group-hover:opacity-100">
+<div class="w-full h-2 bg-surface-container rounded-xs"></div>
+<div class="w-full space-y-1">
+<div class="w-3/4 h-1 bg-surface-variant rounded-xs"></div>
+<div class="w-full h-1 bg-surface-variant rounded-xs"></div>
+</div>
+<span class="font-label-sm text-[9px] text-outline self-center">p. 1</span>
+</div>
+</div>
+<div class="cursor-pointer group flex flex-col items-center">
+<div class="w-16 h-20 bg-surface-container-lowest rounded-md shadow-md overflow-hidden p-1 flex flex-col justify-between ring-2 ring-primary">
+<div class="w-full h-2 bg-error-container/40 rounded-xs flex items-center justify-end px-0.5">
+<span class="h-1 w-1 rounded-full bg-error"></span>
+</div>
+<div class="w-full space-y-1">
+<div class="w-full h-1 bg-error-container/60 rounded-xs"></div>
+<div class="w-2/3 h-1 bg-surface-variant rounded-xs"></div>
+</div>
+<span class="font-label-sm text-[9px] text-primary font-bold self-center">p. 2 (Active)</span>
+</div>
+</div>
+<div class="cursor-pointer group flex flex-col items-center">
+<div class="w-16 h-20 bg-surface-container-lowest rounded-md shadow-sm overflow-hidden p-1 flex flex-col justify-between opacity-70 group-hover:opacity-100">
+<div class="w-full h-2 bg-surface-container rounded-xs"></div>
+<div class="w-full space-y-1">
+<div class="w-4/5 h-1 bg-surface-variant rounded-xs"></div>
+<div class="w-1/2 h-1 bg-surface-variant rounded-xs"></div>
+</div>
+<span class="font-label-sm text-[9px] text-outline self-center">p. 3</span>
+</div>
+</div>
+<div class="cursor-pointer group flex flex-col items-center">
+<div class="w-16 h-20 bg-surface-container-lowest rounded-md shadow-sm overflow-hidden p-1 flex flex-col justify-between opacity-70 group-hover:opacity-100">
+<div class="w-full h-2 bg-surface-container rounded-xs"></div>
+<div class="w-full space-y-1">
+<div class="w-full h-1 bg-surface-variant rounded-xs"></div>
+<div class="w-3/5 h-1 bg-surface-variant rounded-xs"></div>
+</div>
+<span class="font-label-sm text-[9px] text-outline self-center">p. 4</span>
+</div>
+</div>
+</div>
+<!-- High-Fidelity PDF Document Sheet Simulation -->
+<div class="flex-1 bg-surface-container-lowest rounded-lg shadow-md p-8 relative flex flex-col justify-between select-text overflow-hidden">
+<!-- Document Background Seal Texture -->
+<div class="absolute right-12 top-24 w-44 h-44 rounded-full opacity-5 pointer-events-none flex items-center justify-center">
+<span class="material-symbols-outlined text-[160px] text-primary">local_fire_department</span>
+</div>
+<!-- Document Header -->
+<div class="flex flex-col items-center text-center pb-6 space-y-1.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[28px]">local_police</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-wider">DELHI FIRE SERVICES — GOVERNMENT OF NCT OF DELHI</span>
+</div>
+<p class="font-label-sm text-label-sm text-outline tracking-wider uppercase font-semibold">Headquarters: Connaught Place, New Delhi - 110001</p>
+<div class="flex items-center gap-4 mt-2">
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">SERIAL NO: DFS/HQ/2023/NOC-4481</span>
+<span class="font-label-sm text-label-sm text-outline">Dated: 16-May-2022</span>
+</div>
+</div>
+<!-- Document Body Content with Highlighted AI Bounding Boxes -->
+<div class="space-y-6 text-on-surface flex-1 pt-4 relative">
+<div class="text-center font-body-md text-body-md font-semibold tracking-wide text-primary">
+              FORM B-4: CERTIFICATE OF RENEWAL OF FIRE SAFETY DIRECTIVES
+            </div>
+<p class="font-body-md text-body-md leading-relaxed text-on-surface-variant">
+              Certified that the educational premises comprising Ground plus 4 upper storeys located at Plot 18-B, Institutional Area, Sector 9, Dwarka, New Delhi belonging to <strong class="text-on-surface">Northfield Institute of Technology</strong> was inspected on 11-May-2022 by the nominated inspecting officer in the presence of Principal and found to comply with the statutory provisions of the Delhi Fire Prevention and Safety Act, 1986.
+            </p>
+<!-- Discrepancy Highlight [1]: Expired Validity Date -->
+<div class="relative p-3 rounded-lg bg-error-container/20 group cursor-pointer transition-all hover:bg-error-container/30">
+<div class="absolute -top-3 left-3 bg-error text-on-error font-label-sm text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+<span>[1] CRITICAL LAPSE</span>
+<span class="material-symbols-outlined text-[11px]">warning</span>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<span class="font-body-md text-body-md font-bold text-on-error-container">Validity Date: 15-May-2025</span>
+<div class="font-body-sm text-body-sm text-error font-medium">Session starts 01-July-2025 (Expired 47 days prior to academic opening)</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-1 rounded bg-error text-on-error font-semibold">APH Clause 6.3(b) Violated</span>
+</div>
+</div>
+<!-- Discrepancy Highlight [2]: Area Mismatch -->
+<div class="relative p-3 rounded-lg bg-surface-container-high/60 group cursor-pointer transition-all hover:bg-surface-container-high">
+<div class="absolute -top-3 left-3 bg-secondary text-on-secondary font-label-sm text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+<span>[2] AREA DISCREPANCY</span>
+<span class="material-symbols-outlined text-[11px]">straighten</span>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<span class="font-body-md text-body-md font-bold text-on-surface">Sanctioned Floor Area: 12,200 sq.m</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Self-Declaration claimed 18,400 sq.m in application dossier (+6,200 sq.m uncertified)</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-1 rounded bg-surface-container text-on-surface-variant font-semibold">Δ +50.8%</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Subject to terms: All exit pathways shall be kept clear of any storage. Automatic sprinkler installations and wet riser hose reels must be tested monthly under logged register maintenance.
+            </p>
+<!-- Discrepancy Highlight [3]: Cryptographic Timestamp Delta -->
+<div class="relative p-3 rounded-lg bg-tertiary-fixed/30 group cursor-pointer transition-all hover:bg-tertiary-fixed/50">
+<div class="absolute -top-3 left-3 bg-tertiary text-on-tertiary font-label-sm text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+<span>[3] DIGITAL SIG ANOMALY</span>
+<span class="material-symbols-outlined text-[11px]">fingerprint</span>
+</div>
+<div class="flex items-center justify-between">
+<div>
+<span class="font-body-md text-body-md font-bold text-on-surface">Digital Signature Block: C=IN, O=DFS-NIC, CN=Sunil Rawat (Dy. CFO)</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant">PKI Cert serial 9FA4-118B. Timestamp signature delta exceeds statutory window (&gt;72h).</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-1 rounded bg-tertiary-container text-on-tertiary-container font-semibold">Revocation Check Valid</span>
+</div>
+</div>
+</div>
+<!-- Document Footer Section -->
+<div class="pt-8 flex items-end justify-between">
+<div class="flex flex-col gap-1">
+<div class="w-32 h-10 bg-surface-container flex items-center justify-center rounded">
+<span class="font-label-sm text-[11px] text-outline italic">Official Wet Stamp</span>
+</div>
+<span class="font-label-sm text-[10px] text-outline">Digitally preserved via NIC GovCloud</span>
+</div>
+<div class="flex flex-col items-end">
+<div class="font-body-md text-body-md font-bold text-on-surface">Sunil Rawat</div>
+<span class="font-body-sm text-body-sm text-outline">Deputy Chief Fire Officer (Hqtrs)</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Government of NCT of Delhi</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: AI Findings & Verification Workspace (42% width) -->
+<div class="col-span-12 xl:col-span-5 flex flex-col gap-4">
+<!-- Tabs Navigation -->
+<div class="bg-surface-container-lowest p-2 rounded-xl shadow-sm flex items-center gap-1">
+<button class="flex-1 py-2 px-3 rounded-lg bg-primary text-on-primary font-body-md text-body-md font-semibold flex items-center justify-center gap-2 shadow-sm" type="button">
+<span>Findings</span>
+<span class="h-5 w-5 rounded-full bg-on-primary/20 text-on-primary font-label-sm text-label-sm flex items-center justify-center">6</span>
+</button>
+<button class="flex-1 py-2 px-3 rounded-lg text-on-surface-variant hover:bg-surface-container font-body-md text-body-md font-medium flex items-center justify-center gap-2 transition-colors" type="button">
+<span>Verification</span>
+<span class="h-5 w-5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center">4</span>
+</button>
+<button class="flex-1 py-2 px-3 rounded-lg text-on-surface-variant hover:bg-surface-container font-body-md text-body-md font-medium flex items-center justify-center gap-2 transition-colors" type="button">
+<span>Records</span>
+<span class="h-5 w-5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center">18</span>
+</button>
+<button class="py-2 px-3 rounded-lg text-on-surface-variant hover:bg-surface-container font-body-md text-body-md font-medium flex items-center justify-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span>Audit Log</span>
+</button>
+</div>
+<!-- Checklist Progress Summary Banner -->
+<div class="bg-surface-container-lowest p-4 rounded-xl shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-3.5">
+<!-- Circular Progress Ring (Inline SVG under 2KB) -->
+<div class="relative w-12 h-12 flex items-center justify-center flex-shrink-0">
+<svg class="w-12 h-12 -rotate-90 transform" viewbox="0 0 36 36">
+<path class="text-surface-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="82, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-label-sm text-[10px] font-bold text-on-surface">82%</span>
+</div>
+<div>
+<div class="font-body-md text-body-md font-bold text-on-surface">14 of 17 Statutory Checks Completed</div>
+<div class="font-body-sm text-body-sm text-error font-medium">3 action items require officer determination</div>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+          High Scrutiny Alert
+        </span>
+</div>
+<!-- Findings Scroll Area -->
+<div class="flex flex-col gap-4">
+<!-- Finding 1: Fire Safety Expiration -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2.5">
+<span class="h-6 w-6 rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                1
+              </span>
+<div>
+<h2 class="font-body-lg text-body-lg font-bold text-on-surface leading-snug">
+                  Fire safety certificate expires before academic session start
+                </h2>
+<div class="flex flex-wrap items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant font-medium">
+                    Clause 6.3(b) - Statutory Safety Norms
+                  </span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-bold">
+<span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
+                    High Confidence (99.1%)
+                  </span>
+</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-[10px] uppercase font-bold tracking-wider">
+              Critical
+            </span>
+</div>
+<!-- Snippet Comparison Box -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center gap-3">
+<div class="w-20 h-12 bg-surface-container-highest rounded flex flex-col items-center justify-center p-1 text-center flex-shrink-0 shadow-inner">
+<span class="font-label-sm text-[9px] text-outline uppercase">Scanned OCR</span>
+<span class="font-label-sm text-label-sm font-bold text-error">15-05-2025</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              The submitted fire safety certificate <strong>DFS/HQ/2023/NOC-4481</strong> validity ended on 15 May 2025. AICTE Approval Process Handbook (APH) 2026-27 mandates continuous validity throughout the academic tenure.
+            </p>
+</div>
+<!-- Preliminary indicator warning -->
+<div class="flex items-center gap-1.5 text-body-sm font-body-sm text-outline">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span>Preliminary AI indicator — requires statutory officer confirmation.</span>
+</div>
+<!-- Actions -->
+<div class="flex flex-wrap items-center gap-2 pt-1">
+<button class="h-8 px-3 rounded-lg bg-primary-container text-on-primary font-body-sm text-body-sm font-semibold flex items-center gap-1.5 shadow-sm hover:opacity-90 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Confirm Flag</span>
+</button>
+<button class="h-8 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium flex items-center gap-1.5 transition-colors" onclick="openDismissModal('Finding #1: Fire Safety Expiration')" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>Dismiss with Reason</span>
+</button>
+<button class="h-8 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium flex items-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span>Request More Evidence</span>
+</button>
+</div>
+</div>
+<!-- Finding 2: Faculty Duplication Risk -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2.5">
+<span class="h-6 w-6 rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                2
+              </span>
+<div>
+<h2 class="font-body-lg text-body-lg font-bold text-on-surface leading-snug">
+                  Faculty ID F-7F3A registered concurrently at three institutions
+                </h2>
+<div class="flex flex-wrap items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant font-medium">
+                    Clause 4.12 - Full-time Faculty Exclusivity
+                  </span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-primary font-bold">
+<span class="h-1.5 w-1.5 rounded-full bg-primary"></span>
+                    High Confidence (96.4%)
+                  </span>
+</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-[10px] uppercase font-bold tracking-wider">
+              Severe
+            </span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col gap-2">
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Aadhaar-seeded faculty profile <strong>Dr. R. K. Varma (PIN #8029-4112)</strong> appears in active teaching rolls at <strong>Kalinga Institute</strong> and <strong>Deccan Polytechnic</strong> with overlapping full-time commitments.
+            </p>
+<div class="grid grid-cols-3 gap-2 pt-1 font-label-sm text-label-sm">
+<div class="p-2 rounded bg-surface-container-lowest">
+<span class="text-outline block text-[10px]">Northfield (Here)</span>
+<span class="font-bold text-on-surface">Prof &amp; HoD (CSE)</span>
+</div>
+<div class="p-2 rounded bg-surface-container-lowest">
+<span class="text-outline block text-[10px]">Kalinga Inst.</span>
+<span class="font-bold text-error">Active Professor</span>
+</div>
+<div class="p-2 rounded bg-surface-container-lowest">
+<span class="text-outline block text-[10px]">Deccan Poly.</span>
+<span class="font-bold text-error">Visiting Dean</span>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-wrap items-center gap-2 pt-1">
+<button class="h-8 px-3 rounded-lg bg-primary-container text-on-primary font-body-sm text-body-sm font-semibold flex items-center gap-1.5 shadow-sm hover:opacity-90 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Confirm Flag</span>
+</button>
+<button class="h-8 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium flex items-center gap-1.5 transition-colors" onclick="openDismissModal('Finding #2: Faculty Duplication')" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>Dismiss with Reason</span>
+</button>
+<button class="h-8 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium flex items-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">hub</span>
+<span>Cross-Verify Profiles</span>
+</button>
+</div>
+</div>
+<!-- Finding 3: Area Variance vs GIS -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2.5">
+<span class="h-6 w-6 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                3
+              </span>
+<div>
+<h2 class="font-body-lg text-body-lg font-bold text-on-surface leading-snug">
+                  Declared built-up area exceeds municipal cadastral footprint
+                </h2>
+<div class="flex flex-wrap items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant font-medium">
+                    Clause 2.4 - Land &amp; Built-up Space Norms
+                  </span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-secondary font-bold">
+<span class="h-1.5 w-1.5 rounded-full bg-secondary"></span>
+                    Confidence (91.8%)
+                  </span>
+</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[10px] uppercase font-bold tracking-wider">
+              Medium
+            </span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center gap-4">
+<div class="w-24 h-16 rounded overflow-hidden flex-shrink-0 relative bg-surface-variant">
+<img class="w-full h-full object-cover" data-alt="Satellite imagery overlay of technical campus boundary lines with GIS polygon vector contours and red deviation markers in Delhi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW5ITAnjhv274rBmKLG7rx9ynzg23tlpTXn6bNq4PFjPn31hMUk8cf4wC7rth07UXpUYxf0eyicy0H6EqBjqFlpXbatLWYizC5xBVZ8ilui4y8XEgCOjmuNbK_ME9aLsTN12ml6NIB-f6ZFSigRFs-RLBhaeXqhgq75EtO5wVye6ji8NHe-1o6FyjzInGX8VMPWaBx0z5LM0qUdqGnTA8XMokY8oKF3IO3UDsBQXtZcyloKPNMp-gD"/>
+<span class="absolute bottom-1 right-1 font-label-sm text-[8px] bg-inverse-surface/80 text-inverse-on-surface px-1 rounded">GIS Map</span>
+</div>
+<div class="flex-1 text-body-sm font-body-sm text-on-surface-variant">
+<div>Built-up area declared: <strong class="text-on-surface">18,400 sq.m</strong></div>
+<div>Municipal GIS footprint: <strong class="text-on-surface">13,800 sq.m</strong></div>
+<div class="font-label-sm text-label-sm text-error font-semibold mt-0.5">+33.3% unverified delta outside cadastral envelope</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-wrap items-center gap-2 pt-1">
+<button class="h-8 px-3 rounded-lg bg-primary-container text-on-primary font-body-sm text-body-sm font-semibold flex items-center gap-1.5 shadow-sm hover:opacity-90 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>Confirm Flag</span>
+</button>
+<button class="h-8 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium flex items-center gap-1.5 transition-colors" onclick="openDismissModal('Finding #3: Cadastral Footprint Mismatch')" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+<span>Dismiss</span>
+</button>
+<button class="h-8 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium flex items-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">map</span>
+<span>Request Physical Inspection</span>
+</button>
+</div>
+</div>
+<!-- Finding 4: Timestamp Delta -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-sm flex flex-col gap-3">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-2.5">
+<span class="h-6 w-6 rounded-full bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
+                4
+              </span>
+<div>
+<h2 class="font-body-lg text-body-lg font-bold text-on-surface leading-snug">
+                  Architect digital certificate signature timestamp mismatch
+                </h2>
+<div class="flex flex-wrap items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-high font-label-sm text-label-sm text-on-surface-variant font-medium">
+                    Clause 1.8 - Digital Authentication Standards
+                  </span>
+<span class="font-label-sm text-label-sm text-outline">Preliminary Indicator</span>
+</div>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[10px] uppercase font-semibold">
+              Advisory
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            COA licensed architect certificate submitted on 14-Feb was sealed using an unverified proxy timestamp authority. Primary cryptographic key remains valid.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Dismiss With Reason Modal (Built into DOM) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/40 backdrop-blur-sm p-4" id="dismissModal">
+<div class="bg-surface-container-lowest max-w-lg w-full rounded-2xl shadow-2xl p-6 flex flex-col gap-4">
+<div class="flex items-center justify-between pb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[24px]">cancel</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Dismiss Discrepancy Flag</span>
+</div>
+<button class="p-1 rounded-lg text-outline hover:bg-surface-container" onclick="closeDismissModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="font-body-md text-body-md text-on-surface" id="modalTargetFindingName">
+        Select statutory rationale for overriding this automated rule finding:
+      </div>
+<!-- Statutory Rationale Radio Options -->
+<div class="space-y-2.5">
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="text-primary focus:ring-primary" name="dismissReason" type="radio" value="offline"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Document verified offline by regional directorate</span>
+<span class="font-body-sm text-body-sm text-outline">Physically countersigned NOC produced during inspection</span>
+</div>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input class="text-primary focus:ring-primary" name="dismissReason" type="radio" value="superseded"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Superseded by supplemental annexure</span>
+<span class="font-body-sm text-body-sm text-outline">Updated renewal slip deposited under Annexure 9-C</span>
+</div>
+</label>
+<label class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input class="text-primary focus:ring-primary" name="dismissReason" type="radio" value="typographical"/>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Typographical / OCR false positive</span>
+<span class="font-body-sm text-body-sm text-outline">Machine vision read error verified against physical scan</span>
+</div>
+</label>
+</div>
+<!-- Mandatory Officer Justification Textarea -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-sm text-label-sm uppercase font-semibold text-on-surface-variant">
+          Mandatory Statutory Justification Note (Stored in Immutable Audit Trail)
+        </label>
+<textarea class="w-full p-3 rounded-lg bg-surface-container-low font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container focus:ring-2 focus:ring-primary" placeholder="Enter detailed administrative reasoning and reference numbers for formal statutory record..." rows="3"></textarea>
+</div>
+<!-- Modal Footer -->
+<div class="flex items-center justify-end gap-3 pt-2">
+<button class="h-10 px-4 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-md text-body-md font-medium transition-colors" onclick="closeDismissModal()" type="button">
+          Cancel
+        </button>
+<button class="h-10 px-5 rounded-lg bg-error hover:bg-on-error-container text-on-error font-body-md text-body-md font-semibold shadow-md transition-colors" onclick="submitDismissal()" type="button">
+          Confirm Dismissal &amp; Sign Override
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Risk Popover Toggle Logic
+  const riskTrigger = document.getElementById('riskPopoverTrigger');
+  const riskPopover = document.getElementById('riskPopover');
+
+  if (riskTrigger && riskPopover) {
+    riskTrigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      riskPopover.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!riskPopover.contains(e.target) && e.target !== riskTrigger) {
+        riskPopover.classList.add('hidden');
+      }
+    });
+  }
+
+  // Dismiss Modal Handlers
+  function openDismissModal(findingTitle) {
+    const modal = document.getElementById('dismissModal');
+    const titleHolder = document.getElementById('modalTargetFindingName');
+    if (titleHolder && findingTitle) {
+      titleHolder.textContent = 'Selected: ' + findingTitle;
+    }
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  function closeDismissModal() {
+    const modal = document.getElementById('dismissModal');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  function submitDismissal() {
+    alert('Statutory override registered. Audit hash appended to Officer Ledger.');
+    closeDismissModal();
+  }
+
+  // Split Comparison Interactive State
+  const compareBtn = document.getElementById('toggleSplitCompare');
+  if (compareBtn) {
+    compareBtn.addEventListener('click', () => {
+      compareBtn.classList.toggle('bg-primary-container');
+      compareBtn.classList.toggle('text-on-primary');
+      alert('Split comparison mode toggled: Overlaying official Municipal Cadastral Layer (Delhi GIS).');
+    });
+  }
+</script></main></div></body></html>
