@@ -1,7 +1,3 @@
-__pycache__/
-*.py[cod]
 .env
-voiceover/clips/
-voiceover/parts/
-voiceover/frames/*
-!voiceover/frames/step_01_final.png
+.DS_Store
+Thumbs.db
